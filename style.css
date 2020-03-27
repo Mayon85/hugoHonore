@@ -1,0 +1,657 @@
+/*
+
+Font-families : Dosis (Titles) and Quicksand (Content)
+Colors : differents shades of grey + purple #691570
+
+Summary:
+
+- Global
+- Header
+- Histoire 
+- Philosophie
+- Romans
+- Rendez-Vous
+- Footer
+- RESPONSIVE
+
+
+
+*** GLOBAL ********************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 0 12px 0 12px;
+    text-align: center;
+}
+
+
+h3 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+/*** HEADER ********************************/
+
+header {
+    background-image: url(ressources/hero.gif);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/*** NAVBAR ******/
+
+nav {
+    padding-top: 20px;
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav a {
+    color: black;
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+}
+
+nav a:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: -5px;
+    width: 110%;
+    height: 15px;
+    opacity: 0;
+    background: white;
+    z-index: -1;
+}
+
+nav a:hover {
+    transition: .4s;
+    color: #691570;
+}
+
+nav a:hover:after {
+    transition: .5s;
+    transform: translateY(-10px);
+    opacity: 1;
+}
+
+.nav-logo {
+    width: 140px;
+}
+
+.a-logo:after {
+    background: transparent;
+}
+
+
+/*** HISTOIRE ********************************/
+
+#histoire {
+    background: #383838;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#histoire h1 {
+    background-color: #383838;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.histoire {
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.cadre-histoire {
+    border: white solid 1px;
+    padding: 40px;
+    position: relative;
+    width: 40%;
+    animation: fadeIn 6s;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+  
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+
+.scrolldown {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-80px) translateX(-50%) rotate(45deg);
+}
+
+.scrolldown span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid #f8f8f8;
+    border-right: 2px solid #f8f8f8;
+    animation: scroll-down 1.5s linear infinite;
+    opacity: 0;
+}
+
+.scrolldown span:nth-child(1) {
+    transform: translate(-15px, -15px);
+    animation-delay: -0.4s;
+}
+
+.scrolldown span:nth-child(2) {
+    transform: translate(0, 0);
+    animation-delay: -0.2s;
+}
+
+.scrolldown span:nth-child(3) {
+    transform: translate(15px, 15px);
+    animation-delay: 0s;
+}
+
+@keyframes scroll-down {
+    0% { 
+        top: -5px;
+        left: -5px;
+        opacity: 0;
+    }
+
+    25% { 
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+    50%,100% { 
+        top: 5px;
+        left: 5px;
+        opacity: 0;
+    }
+}
+/*** PHILOSOPHIE ********************************/
+
+#philosophie {
+    background: #f8f8f8;
+    height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#philosophie h2 {
+    background-color: #f8f8f8;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.philo {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.cadre-philo {
+    border: black solid 1px;
+    padding: 40px;
+    position: relative;
+    width: 50%;
+    animation: slideInLeft 3s;
+    animation-delay: 0.5s;
+}
+
+
+@keyframes slideInLeft {
+    from {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+  }
+
+.philo-img {
+    width: 50%;
+    padding-left: 50px;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    overflow: hidden;
+}
+
+.philo-img img {
+    height: 650px;
+}
+
+/*** ROMANS ********************************/
+
+#romans {
+    background: rgb(206, 206, 206);
+    background: linear-gradient(180deg, rgba(206, 206, 206, 1) 60%, rgb(238, 238, 238) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 1000px;
+    padding: 20px 0 20px 0;
+
+}
+
+#romans h2 {
+    background-color: #cecece;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.cadre-romans {
+    border: white solid 1px;
+    padding: 20px;
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+.book-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    position: relative;
+    width: 275px;
+    height: 275px;
+    overflow: hidden;
+    transition: 0.5s;
+    margin: 40px 40px 40px 40px;
+}
+
+.box:hover {
+    z-index: 1;
+    transform: scale(1.25);
+    box-shadow: 0 24px 40px #3838388e;
+}
+
+.imgbox:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(180deg, #3d383d, #d2b4d4);
+    mix-blend-mode: multiply;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.box:hover .imgbox:before {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.imgbox img {
+    height: 275px;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+    z-index: 2;
+    transition: 0.5s;
+    transform: translateY(150px);
+    opacity: 0;
+}
+
+.box:hover .content {
+    opacity: 1;
+    transition: 0.5s;
+    transform: translateY(0);
+}
+
+.plus {
+    position: absolute;
+    bottom: 6px;
+    right: 20px;
+    font-size: 40px;
+    color: transparent;
+}
+
+
+/*** RENDEZ-VOUS ********************************/
+#pre-rdv {
+    background: url(./ressources/typewriter.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 35%;
+    height: 450px;
+    opacity: 0.8;
+}
+
+#rendez-vous {
+    background: #f8f8f8;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rendez-vous h2 {
+    background-color: #f8f8f8;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rdv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadre-rdv {
+    border: black solid 1px;
+    padding: 40px;
+    position: relative;
+    width: 100%;
+    animation: fadeIn 6s;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+
+.rdv ul li {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    list-style: none;
+    line-height: 40px;
+}
+
+.rdv span {
+    font-weight: bold;
+}
+
+.reseaux {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reseaux p {
+    font-size: 25px;
+}
+
+.reseaux i {
+    font-size: 32px;
+    color: #383838;
+    padding: 10px 0 0 10px;
+}
+
+.reseaux i:hover {
+    transition: 0.5s;
+    color: #691570;
+}
+
+
+/*** FOOTER ********************************/
+
+footer {
+    background-color: #383838;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    color: white;
+    padding: 15px;
+}
+
+footer img {
+    height: 50px;
+}
+
+
+/*** RESPONSIVE  *******************************************************/
+
+@media screen and (max-width:900px) {
+
+    h2,
+    .reseaux p {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    .cadre {
+        width: 70%;
+    }
+
+    .philo-img {
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+
+    .philo-img img {
+        height: auto;
+        width: 100%;
+    }
+
+    .plus {
+        color: white;
+    }
+
+    .cadre-rdv {
+        width: 80%;
+    }
+
+    .reseaux {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width:650px) {
+
+
+    nav a {
+        font-size: 20px;
+    }
+
+    nav ul li {
+        padding: 15px 0 15px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 90%;
+    }
+
+    .a-logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    .scrolldown {
+        display: none;
+    }
+
+    .philo {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .cadre-philo {
+        margin-top: 50%;
+    }
+
+    .philo-img {
+        position: absolute;
+        top: -50px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .philo-img img {
+        width: 60%;
+    }
+
+    .rdv ul li {
+        font-size: 14px;
+        line-height: 32px;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+
+    h2,
+    .reseaux p {
+        font-size: 18px
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .cadre {
+        width: 80%;
+    }
+
+    .box {
+        width: 200px;
+        height: 200px;
+    }
+
+    .imgbox img {
+        height: 200px;
+    }
+
+    .rdv ul li {
+        font-size: 13px;
+        line-height: 30px;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+
+    .box {
+        width: 140px;
+        height: 140px;
+    }
+
+    .imgbox img {
+        height: 140px;
+    }
+
+    .content h3 {
+        font-size: 13px;
+    }
+
+    .content p {
+        font-size: 8px;
+    }
+}
