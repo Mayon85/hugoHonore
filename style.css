@@ -765,12 +765,12 @@ footer img {
 @media screen and (max-width:400px) {
 
     .box {
-        width: 140px;
-        height: 140px;
+        width: 160px;
+        height: 160px;
     }
 
     .imgbox img {
-        height: 140px;
+        height: 160px;
     }
 
     .content h3 {
