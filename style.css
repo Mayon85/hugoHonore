@@ -286,6 +286,15 @@ nav a:hover:after {
 
 /*** PHILOSOPHIE ********************************/
 
+#pre-philo {
+    height: 450px;
+    background: url(./ressources/typewriter.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.8;
+}
+
 #philosophie {
     background: #f8f8f8;
     height: 570px;
@@ -494,14 +503,6 @@ nav a:hover:after {
 
 
 /*** RENDEZ-VOUS ********************************/
-#pre-rdv {
-    background: url(./ressources/typewriter.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 35%;
-    height: 450px;
-    opacity: 0.8;
-}
 
 #rendez-vous {
     background: #f8f8f8;
