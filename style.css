@@ -380,6 +380,7 @@ nav a:hover:after {
 
 .philo-img img {
     height: 650px;
+
 }
 
 /*** ROMANS ********************************/
@@ -646,6 +647,7 @@ footer img {
     .philo-img img {
         height: auto;
         width: 100%;
+        object-fit: cover;
     }
 
     .plus {
