@@ -70,8 +70,11 @@ nav {
 }
 
 nav ul {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: space-evenly;
     justify-content: space-evenly;
+    -webkit-box-align: center;
     align-items: center;
 }
 
@@ -104,12 +107,15 @@ nav a:after {
 }
 
 nav a:hover {
+    -webkit-transition: .4s;
     transition: .4s;
     color: #691570;
 }
 
 nav a:hover:after {
+    -webkit-transition: .5s;
     transition: .5s;
+    -webkit-transform: translateY(-10px);
     transform: translateY(-10px);
     opacity: 1;
 }
@@ -128,8 +134,11 @@ nav a:hover:after {
 #histoire {
     background: #383838;
     min-height: 700px;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-align: center;
     align-items: center;
+    -webkit-box-pack: center;
     justify-content: center;
     position: relative;
 }
@@ -139,13 +148,16 @@ nav a:hover:after {
     position: absolute;
     top: 0px;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
 .histoire {
     color: white;
     text-align: center;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: center;
     justify-content: center;
 }
 
@@ -154,25 +166,37 @@ nav a:hover:after {
     padding: 40px;
     position: relative;
     width: 40%;
+    -webkit-animation: fadeIn 6s;
     animation: fadeIn 6s;
+    -webkit-animation-delay: 0.2s;
     animation-delay: 0.2s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
-  
-    to {
-      opacity: 1;
-    }
-  }
 
-  
+    to {
+        opacity: 1;
+    }
+}
+
+
 .fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
-  }
+}
 
 .scrolldown {
     position: absolute;
@@ -180,6 +204,7 @@ nav a:hover:after {
     left: 50%;
     width: 40px;
     height: 40px;
+    -webkit-transform: translateY(-80px) translateX(-50%) rotate(45deg);
     transform: translateY(-80px) translateX(-50%) rotate(45deg);
 }
 
@@ -191,50 +216,84 @@ nav a:hover:after {
     width: 100%;
     border-bottom: 2px solid #f8f8f8;
     border-right: 2px solid #f8f8f8;
+    -webkit-animation: scroll-down 1.5s linear infinite;
     animation: scroll-down 1.5s linear infinite;
     opacity: 0;
 }
 
 .scrolldown span:nth-child(1) {
+    -webkit-transform: translate(-15px, -15px);
     transform: translate(-15px, -15px);
+    -webkit-animation-delay: -0.4s;
     animation-delay: -0.4s;
 }
 
 .scrolldown span:nth-child(2) {
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
+    -webkit-animation-delay: -0.2s;
     animation-delay: -0.2s;
 }
 
 .scrolldown span:nth-child(3) {
+    -webkit-transform: translate(15px, 15px);
     transform: translate(15px, 15px);
+    -webkit-animation-delay: 0s;
     animation-delay: 0s;
 }
 
-@keyframes scroll-down {
-    0% { 
+@-webkit-keyframes scroll-down {
+    0% {
         top: -5px;
         left: -5px;
         opacity: 0;
     }
 
-    25% { 
+    25% {
         top: 0;
         left: 0;
         opacity: 1;
     }
-    50%,100% { 
+
+    50%,
+    100% {
         top: 5px;
         left: 5px;
         opacity: 0;
     }
 }
+
+@keyframes scroll-down {
+    0% {
+        top: -5px;
+        left: -5px;
+        opacity: 0;
+    }
+
+    25% {
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        top: 5px;
+        left: 5px;
+        opacity: 0;
+    }
+}
+
 /*** PHILOSOPHIE ********************************/
 
 #philosophie {
     background: #f8f8f8;
     height: 570px;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-align: center;
     align-items: center;
+    -webkit-box-pack: center;
     justify-content: center;
     position: relative;
 }
@@ -244,13 +303,16 @@ nav a:hover:after {
     position: absolute;
     top: 0px;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
 .philo {
     width: 80%;
     margin: auto;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-align: center;
     align-items: center;
 }
 
@@ -259,28 +321,44 @@ nav a:hover:after {
     padding: 40px;
     position: relative;
     width: 50%;
+    -webkit-animation: slideInLeft 3s;
     animation: slideInLeft 3s;
+    -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s;
+}
+
+
+@-webkit-keyframes slideInLeft {
+    from {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 
 @keyframes slideInLeft {
     from {
-      -webkit-transform: translate3d(-100%, 0, 0);
-      transform: translate3d(-100%, 0, 0);
-      visibility: visible;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
     }
-  
+
     to {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
-  }
-  
-  .slideInLeft {
+}
+
+.slideInLeft {
     -webkit-animation-name: slideInLeft;
     animation-name: slideInLeft;
-  }
+}
 
 .philo-img {
     width: 50%;
@@ -299,9 +377,13 @@ nav a:hover:after {
 
 #romans {
     background: rgb(206, 206, 206);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(206, 206, 206, 1)), to(rgb(238, 238, 238)));
     background: linear-gradient(180deg, rgba(206, 206, 206, 1) 60%, rgb(238, 238, 238) 100%);
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
     align-items: center;
     min-height: 1000px;
     padding: 20px 0 20px 0;
@@ -313,6 +395,7 @@ nav a:hover:after {
     position: absolute;
     top: 0px;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     color: white;
 }
@@ -327,8 +410,11 @@ nav a:hover:after {
 
 .book-container {
     position: relative;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -338,12 +424,14 @@ nav a:hover:after {
     width: 275px;
     height: 275px;
     overflow: hidden;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     margin: 40px 40px 40px 40px;
 }
 
 .box:hover {
     z-index: 1;
+    -webkit-transform: scale(1.25);
     transform: scale(1.25);
     box-shadow: 0 24px 40px #3838388e;
 }
@@ -356,14 +444,17 @@ nav a:hover:after {
     width: 100%;
     height: 100%;
     z-index: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3d383d), to(#d2b4d4));
     background: linear-gradient(180deg, #3d383d, #d2b4d4);
     mix-blend-mode: multiply;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     opacity: 0;
 }
 
 .box:hover .imgbox:before {
     opacity: 1;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
 }
 
@@ -378,14 +469,18 @@ nav a:hover:after {
     padding: 10px;
     color: white;
     z-index: 2;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
+    -webkit-transform: translateY(150px);
     transform: translateY(150px);
     opacity: 0;
 }
 
 .box:hover .content {
     opacity: 1;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
 }
 
@@ -411,8 +506,11 @@ nav a:hover:after {
 #rendez-vous {
     background: #f8f8f8;
     min-height: 600px;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-align: center;
     align-items: center;
+    -webkit-box-pack: center;
     justify-content: center;
 }
 
@@ -421,12 +519,16 @@ nav a:hover:after {
     position: absolute;
     top: 0px;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
 .rdv {
+    display: -webkit-box;
     display: flex;
+    -webkit-box-align: center;
     align-items: center;
+    -webkit-box-pack: center;
     justify-content: center;
 }
 
@@ -435,24 +537,26 @@ nav a:hover:after {
     padding: 40px;
     position: relative;
     width: 100%;
+    -webkit-animation: fadeIn 6s;
     animation: fadeIn 6s;
+    -webkit-animation-delay: 0.5s;
     animation-delay: 0.5s;
 }
 
 @keyframes fadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
-  
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
+}
+
 .fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
-  }
+}
 
 .rdv ul li {
     font-family: 'Quicksand', sans-serif;
@@ -468,8 +572,11 @@ nav a:hover:after {
 
 .reseaux {
     padding-top: 15px;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
     align-items: center;
 }
 
@@ -484,6 +591,7 @@ nav a:hover:after {
 }
 
 .reseaux i:hover {
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     color: #691570;
 }
@@ -493,8 +601,11 @@ nav a:hover:after {
 
 footer {
     background-color: #383838;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
     align-items: center;
 }
 
@@ -545,6 +656,8 @@ footer img {
     }
 
     .reseaux {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
         flex-direction: column;
     }
 
@@ -562,7 +675,10 @@ footer img {
     }
 
     nav ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
         flex-direction: column;
+        -webkit-box-align: end;
         align-items: flex-end;
         width: 90%;
     }
@@ -578,6 +694,8 @@ footer img {
     }
 
     .philo {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
         flex-direction: column-reverse;
         width: 100%;
     }
@@ -590,7 +708,9 @@ footer img {
         position: absolute;
         top: -50px;
         padding: 0;
+        display: -webkit-box;
         display: flex;
+        -webkit-box-pack: center;
         justify-content: center;
     }
 
