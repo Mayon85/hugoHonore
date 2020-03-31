@@ -713,12 +713,14 @@ footer img {
     .philo-img {
         position: absolute;
         top: -50px;
+        left: 50%;
         padding: 0;
+        transform: translateX(-25%);
 
     }
 
     .philo-img img {
-        width: 60%;
+        width: 50%;
     }
 
     .rdv ul li {
