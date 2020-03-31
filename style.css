@@ -369,17 +369,14 @@ nav a:hover:after {
     animation-name: slideInLeft;
 }
 
-.philo-img {
+.philo img {
+    height: auto;
     width: 50%;
     padding-left: 50px;
     position: absolute;
     top: -50px;
     right: 0;
     overflow: hidden;
-}
-
-.philo-img img {
-    height: 650px;
 
 }
 
@@ -623,6 +620,17 @@ footer img {
 
 /*** RESPONSIVE  *******************************************************/
 
+@media screen and (max-width:1150px) {
+
+    .philo img {
+        height: auto;
+        width: 50%;
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+}
+
 @media screen and (max-width:900px) {
 
     h2,
@@ -641,16 +649,8 @@ footer img {
         width: 70%;
     }
 
-    .philo-img {
-        position: relative;
-        top: 0;
+    .cadre-philo {
         width: 100%;
-    }
-
-    .philo-img img {
-        height: auto;
-        width: 100%;
-        object-fit: cover;
     }
 
     .plus {
@@ -707,20 +707,17 @@ footer img {
     }
 
     .cadre-philo {
-        margin-top: 50%;
+        margin-top: 40%;
+        width: 70%;
     }
 
-    .philo-img {
+    .philo img {
+        width: 50%;
         position: absolute;
-        top: -50px;
+        top: -30px;
         left: 50%;
         padding: 0;
-        transform: translateX(-25%);
-
-    }
-
-    .philo-img img {
-        width: 50%;
+        transform: translateX(-50%);
     }
 
     .rdv ul li {
