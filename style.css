@@ -714,10 +714,7 @@ footer img {
         position: absolute;
         top: -50px;
         padding: 0;
-        display: -webkit-box;
-        display: flex;
-        -webkit-box-pack: center;
-        justify-content: center;
+
     }
 
     .philo-img img {
